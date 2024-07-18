@@ -1,4 +1,47 @@
 // Import
 
+@import '_base';
 @import '_variables';
 @import '_mixins';
+@import '_fonts';
+
+.container{
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.fa{
+  color: $secondary;
+  background-color: #fff;
+  width: 50px;
+  padding: 17px 0;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.btn{
+  background-color: $primary;
+  color:white;
+  font-weight: 700;
+
+}
+
+header{
+  margin-top: 50px;
+  
+  .container{
+
+    @include flex;
+
+    .header__links{
+
+      a{
+        margin-right: 25px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@import '_breakpoints';
