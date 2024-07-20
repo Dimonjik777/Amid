@@ -1,70 +1,9 @@
 // Import
 
-@import '_base';
 @import '_variables';
 @import '_mixins';
+@import '_base';
 @import '_fonts';
-
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  margin-bottom: 125px;
-}
-
-.fa {
-  color: $secondary;
-  background-color: #fff;
-  width: 50px;
-  padding: 17px 0;
-  border-radius: 50%;
-  text-align: center;
-}
-
-.btn {
-  background-color: $primary;
-  color: white;
-  font-weight: 700;
-  display: inline-block;
-  padding: 10px 15px;
-  border-radius: 2rem;
-  transition: 0.6s ease all;
-
-  &:hover {
-    background-color: $secondary;
-
-    i {
-      margin-left: 20px;
-    }
-  }
-
-  div {
-    @include flex;
-    padding: 5px 15px;
-
-    i {
-      margin-left: 10px;
-      transition: 0.6s ease all;
-    }
-  }
-}
-
-.title__block {
-
-  width: 540px;
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    font-size: 16px;
-    color: $primary;
-    padding: 5px 10px;
-    border: 1px solid #F2FAF9;
-    border-radius: 5px;
-    top: -35px;
-    font-weight: 500;
-  }
-}
 
 header {
   margin-top: 50px;
@@ -79,6 +18,15 @@ header {
       a {
         margin-right: 25px;
         font-size: 16px;
+        border-bottom: 5px solid rgba(255, 130, 59, 0);
+        transition: 0.6s ease all;
+        padding-bottom: 10px;
+
+
+        &:hover {
+          padding-bottom: 0;
+          border-bottom: 5px solid rgba(255, 130, 59, 1);
+        }
       }
     }
 
@@ -140,6 +88,20 @@ header {
         .video {
           @include flex;
 
+          a {
+            
+            img{
+              transition: 0.3s ease all;
+            }
+            
+            &:hover{
+
+              img{
+                transform: scale(125%);
+              }
+            }
+          }
+
 
           p {
             width: auto;
@@ -197,6 +159,12 @@ header {
 
       img {
         margin-right: 25px;
+        cursor: pointer;
+        transition: 0.3s ease all;
+
+        &:hover{
+          transform: scale(110%);
+        }
       }
     }
   }
@@ -289,6 +257,7 @@ header {
 
             @include flex;
             flex-direction: column;
+            align-items: flex-start;
             height: 315px;
 
             p {
@@ -342,7 +311,7 @@ header {
 
     .blog__content {
       @include flex;
-      
+
 
       .letter {
         width: 520px;
@@ -357,7 +326,7 @@ header {
           color: #464646;
         }
 
-        &:before{
+        &:before {
           content: '22 Dec';
           position: absolute;
           background-color: $secondary;
@@ -378,18 +347,18 @@ header {
           box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
         }
 
-        &:last-child{
+        &:last-child {
 
-          &:before{
+          &:before {
             content: '23 Dec';
           }
         }
       }
 
-      
+
     }
 
-    .arrows{
+    .arrows {
       @include flex;
       width: 65px;
       left: 90%;
@@ -397,21 +366,117 @@ header {
 
       position: absolute;
 
-      i{
+      i {
         color: $secondary;
       }
 
-      i:first-child{
+      i:first-child {
         transform: rotate(-180deg);
         opacity: 0.5;
       }
 
-      i:last-child{
+      i:last-child {
         cursor: pointer;
       }
     }
   }
 }
 
+.subscribe {
+  background-color: #E9FBF9;
+
+  .container {
+    @include flex;
+    flex-direction: column;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    margin-bottom: 0;
+
+    h1 {
+      text-align: center;
+      width: 950px;
+    }
+
+    .subscribe__describe {
+      @include flex;
+      margin-top: 50px;
+
+      p {
+        margin-right: 25px;
+        color: $primary;
+      }
+    }
+  }
+}
+
+footer {
+
+  background-color: #E9FBF9;
+
+  .container {
+    margin-bottom: 0;
+    padding-bottom: 25px;
+
+    @include flex;
+
+    .links {
+
+      a {
+        margin-right: 25px;
+        transition: 0.3s ease all;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+
+    .footer__contacts {
+
+      color: $secondary;
+
+      a {
+        color: $secondary;
+        transition: 0.3s ease all;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+
+      a:first-child {
+        display: block;
+        margin-bottom: 15px;
+      }
+
+      a:last-child {
+        display: block;
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+.footer__bottom {
+  background-color: $secondary;
+  color: white;
+
+  .container {
+    @include flex;
+    padding: 10px 0;
+    margin-bottom: 0;
+
+    p {
+      font-weight: 300;
+    }
+
+    .footer__bottom__links {
+
+      a {
+        margin-right: 25px;
+      }
+    }
+  }
+}
 
 @import '_breakpoints';
