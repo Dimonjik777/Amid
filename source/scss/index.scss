@@ -30,15 +30,26 @@ header {
       }
     }
 
-    .btn {
-      padding: 5px 25px;
-      background-color: $secondary;
+    div {
+      display: flex;
+      align-items: center;
+      .btn {
+        padding: 5px 25px;
+        background-color: $secondary;
 
-      &:hover {
-        background-color: $primary;
+        &:hover {
+          background-color: $primary;
 
+        }
+      }
+
+      .burger {
+        width: 28px;
+        display: none;
+        margin-left: 25px;
       }
     }
+
   }
 }
 
@@ -89,14 +100,14 @@ header {
           @include flex;
 
           a {
-            
-            img{
+
+            img {
               transition: 0.3s ease all;
             }
-            
-            &:hover{
 
-              img{
+            &:hover {
+
+              img {
                 transform: scale(125%);
               }
             }
@@ -153,6 +164,14 @@ header {
     .companies__row {
       @include flex;
 
+      div{
+        @include flex;
+        
+        &:first-child{
+          margin-right: 25px;
+        }
+      }
+
       &:first-child {
         margin-bottom: 25px;
       }
@@ -162,7 +181,11 @@ header {
         cursor: pointer;
         transition: 0.3s ease all;
 
-        &:hover{
+        &:last-child{
+          margin-right: 0;
+        }
+
+        &:hover {
           transform: scale(110%);
         }
       }
@@ -192,6 +215,7 @@ header {
 
       .service {
         width: 320px;
+        margin: 0 25px;
 
         img {
           margin-bottom: 25px;
@@ -224,7 +248,7 @@ header {
       content: "achievements";
     }
 
-    .achievements__right {
+   
 
       .achievements__right__numbers {
         @include flex;
@@ -266,8 +290,10 @@ header {
             }
           }
         }
+        &__mobile{
+          display: none;
+        }
       }
-    }
 
     .achievement {
       h3 {
