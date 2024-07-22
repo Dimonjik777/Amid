@@ -265,6 +265,12 @@
       .footer__bottom__links{
         padding-top: 10px;
         margin-bottom: 25px;
+
+        .fa{
+          width: 35px;
+          height: 35px;
+          padding-top: 9px;
+        }
       }
     }
   }
@@ -340,6 +346,10 @@
     }
   }
 
+  .services .container .services__top p {
+    width: auto;
+}
+
   .achievements{
 
     .container{
@@ -396,6 +406,12 @@
 
         .letter{
           width: auto;
+
+          &:before{
+            top: -15px;
+            left: 75%;
+            transform: scale(85%);
+          }
 
           img{width: 100%;}
         }

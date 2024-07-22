@@ -863,6 +863,11 @@ footer .container .footer__contacts a:last-child {
     padding-top: 10px;
     margin-bottom: 25px;
   }
+  .footer__bottom .container .footer__bottom__links .fa {
+    width: 35px;
+    height: 35px;
+    padding-top: 9px;
+  }
 }
 @media screen and (max-width: 705px) {
   .blog .container .arrows {
@@ -901,6 +906,9 @@ footer .container .footer__contacts a:last-child {
   .first__screen .container .first__screen__left p {
     width: auto;
   }
+  .services .container .services__top p {
+    width: auto;
+  }
   .achievements .container h2 {
     margin-bottom: 50px;
   }
@@ -937,6 +945,12 @@ footer .container .footer__contacts a:last-child {
   }
   .blog .container .blog__content .letter {
     width: auto;
+  }
+  .blog .container .blog__content .letter:before {
+    top: -15px;
+    left: 75%;
+    -webkit-transform: scale(85%);
+            transform: scale(85%);
   }
   .blog .container .blog__content .letter img {
     width: 100%;
